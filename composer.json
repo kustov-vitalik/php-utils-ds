@@ -1,0 +1,54 @@
+{
+  "name": "vk-php-utils/ds",
+  "description": "PHP Java-Like Collections (List, Set, Map)",
+  "type": "library",
+  "keywords": [
+    "php",
+    "list",
+    "java",
+    "collections",
+    "data structures",
+    "ArrayList",
+    "Map",
+    "Set"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vitaly Kustov",
+      "email": "kustov.vitalik@gmail.com",
+      "homepage": "https://github.com/kustov-vitalik",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "symfony/var-dumper": "^6.3",
+    "phpunit/phpunit": "^10.2",
+    "vimeo/psalm": "^5.14",
+    "psalm/plugin-phpunit": "^0.18.4",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "VKPHPUtils\\DS\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "VKPHPUtils\\DS\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "psalm": "vendor/bin/psalm --config=psalm.xml",
+    "tests": "vendor/bin/phpunit --configuration=phpunit.xml.dist",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
+}

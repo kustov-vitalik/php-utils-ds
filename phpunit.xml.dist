@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         colors="true">
+
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </source>
+
+    <coverage includeUncoveredFiles="true" pathCoverage="true">
+        <report>
+<!--            <clover outputFile="clover.xml"/>-->
+<!--            <cobertura outputFile="cobertura.xml"/>-->
+<!--            <crap4j outputFile="crap4j.xml" threshold="50"/>-->
+<!--            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>-->
+<!--            <php outputFile="coverage.php"/>-->
+<!--            <text outputFile="coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>-->
+<!--            <xml outputDirectory="xml-coverage"/>-->
+        </report>
+    </coverage>
+
+
+    <php>
+        <ini name="display_errors" value="1" />
+        <ini name="error_reporting" value="-1" />
+        <ini name="xdebug.mode" value="coverage" />
+    </php>
+
+</phpunit>
